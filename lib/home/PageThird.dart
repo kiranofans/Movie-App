@@ -6,8 +6,8 @@ class PageThird extends StatefulWidget {
   final List<Data> dataList;
 
   //Line to define this class
-  PageThird(
-      {Key key, this.dataList //must initialize the dataList in the class define
+  PageThird({Key key, this.dataList
+    //must initialize the dataList in the class define
       })
       : super(key: key);
 
@@ -18,9 +18,10 @@ class PageThirdState extends State<PageThird> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+        shrinkWrap: true,
         itemCount: widget.dataList.length,
         itemBuilder: (context, index) {
-          return ExpansionTile(
+          return ExpansionTile( //expandable list view
             key: PageStorageKey('${widget.dataList[index].id}'),
             title: Text(widget.dataList[index].title),
             // onExpansionChanged: (b) => setState(() {
@@ -38,9 +39,9 @@ class PageThirdState extends State<PageThird> {
             //           ),
             //         ) ??
             //     false,
-            children: <Widget>[
+            children: <Widget>[ //expand and collapse
               Container(
-                color: index % 2 == 0 ? Colors.redAccent : Colors.lightBlue,
+                color: index % 2 == 0 ? Colors.orange : Colors.limeAccent,
                 height: 100.0,
               ),
             ],
