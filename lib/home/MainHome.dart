@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:movie_app/MemoryKeyValueStore.dart';
 import 'package:movie_app/Data.dart';
 import 'package:movie_app/home/PageHome.dart';
 import 'package:movie_app/home/PageTwo.dart';
